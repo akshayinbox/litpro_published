@@ -3,7 +3,7 @@
 
 ## Prepare
 To run, please make sure your server's (Apache's) document root is set to the public/ directory exactly.
-Also, please edit the .env file to update the Web Server as well as MySQL ports. I used MAMP, therefore these are set to 8888 and 8889, respectively. Depending on your environment, these may be 80 (or 8080) and 3306 respectively.
+Also, please edit your .env file to update the Web Server as well as MySQL ports, if applicable.
 
 ## Run
 1. Running "php artisan migrate:refresh --seed" should repopulate the tables. This step has been done for you.
