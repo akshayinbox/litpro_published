@@ -124,6 +124,21 @@
                 </table>
                 </form>
                 </div></div>
+                <div class="row">
+                    <div class="col-md-12">
+                    <h2>Albums by Band</h2>
+                    <ol>
+                        <?php 
+                        $albums = $band->albums()->get(); 
+                            foreach($albums as $album) {
+                                echo "<li>".$album->name."</li><br>";
+                            }
+
+                        ?>
+                    </ol>
+
+                    </div>
+                </div>
                 </div>
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

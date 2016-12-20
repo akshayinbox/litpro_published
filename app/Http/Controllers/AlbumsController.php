@@ -17,8 +17,9 @@ class AlbumsController extends Controller
     public function edit($albumid) {
     	$album = Album::find($albumid);
     	$band = Band::find($album->band_id);
+        $bands = Band::all();
 
-    	return view('editalbum')->with('album', $album)->with('band', $band);
+    	return view('editalbum')->with('album', $album)->with('band', $band)->with('bands',$bands);
     }
 
     public function delete($albumid) {
@@ -32,6 +33,7 @@ class AlbumsController extends Controller
     	$album = Album::find($albumid);
 
     	$album->name = $request->name;
+        $album->band_id = $request->band;
     	$album->recorded_date = $request->recorded_date;
     	$album->release_date = $request->release_date;
     	$album->number_of_tracks = $request->number_of_tracks;

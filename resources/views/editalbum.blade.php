@@ -110,7 +110,14 @@
                 <tr>
                 <td><?php echo $album->id; ?></td>
                 <td><input name='name' type='text' value='<?php echo $album->name; ?>' required></td>
-                <td><?php echo $band->name; ?></td>
+                <td>
+                <select name='band'>
+                    <?php 
+                    foreach($bands as $b) {
+                           echo "<option value='".$b->id."'".( $band->name == $b->name ? "selected" : "" ) ." >".$b->name."</option>";
+                    }
+                    ?>
+                </select></td>
                 <td><input name='recorded_date' type='text' value='<?php echo $album->recorded_date; ?>'></td>
                 <td><input name='release_date' type='text' value='<?php echo $album->release_date; ?>'></td>
                 <td><input name='number_of_tracks' type='text' value='<?php echo $album->number_of_tracks; ?>'></td>
@@ -121,7 +128,8 @@
                 </tr></tbody>
                 </table>
                 </form>
-                </div></div></div>
+                </div></div>
+                </div>
          <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
