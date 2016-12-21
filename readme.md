@@ -6,7 +6,7 @@ To run, please make sure your server's (Apache's) document root is set to the pu
 Also, please edit your .env file to update the Web Server as well as MySQL ports/credentials, if applicable.
 
 ## Run
-1. Running "php artisan migrate:refresh --seed" should repopulate the tables. This step has been done for you.
+1. Running "php artisan migrate:refresh --seed" should repopulate the tables.
 2. Simply navigate to the web server's document root and voila, you should see a list of bands!
 
 ## Notes
